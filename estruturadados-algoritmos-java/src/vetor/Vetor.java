@@ -1,5 +1,7 @@
 package vetor;
 
+import java.util.Arrays;
+
 public class Vetor {
     private String[] elementos;
 
@@ -38,4 +40,43 @@ public class Vetor {
         } 
         return false;
     }
+
+    public int tamanho(){
+
+        return this.tamanho;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder s = new StringBuilder();
+        s.append("[");
+        
+        for (int i=0; i<this.tamanho-1; i++){
+            s.append(this.elementos[i]);
+            s.append(", ");
+        }
+        if (this.tamanho>0){
+            s.append(this.elementos[this.tamanho-1]);
+        }
+
+        s.append("]");
+
+        /*String s = "[";
+        for (int i=0; i<this.tamanho-1; i++){
+            s += this.elementos[i];
+            s += ", ";
+        }
+
+        if (this.tamanho>0){
+            s += this.elementos[this.tamanho-1];
+        }
+
+        s +="]";
+        return Arrays.toString(elementos);
+        */
+        return s.toString();
+    }
+
+    
 }
