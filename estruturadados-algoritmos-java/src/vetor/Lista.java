@@ -71,6 +71,27 @@ public class Lista<T> {
         return -1;
     }
 
+    public boolean contem (T elemento){
+        /*
+        for (int i = 0; i < this.tamanho; i++) {
+            if(this.elementos[i].equals(elemento)){
+                return true;
+            }
+        }
+        return false;
+        */
+
+        /*
+        int pos = busca (elemento);
+        if (pos > -1){
+            return true;
+        } 
+        return false;
+        */
+
+        return busca(elemento) > -1;
+    }
+
     public void remove (int posicao){
         if (!(posicao >= 0 && posicao < tamanho)){
             throw new IllegalArgumentException("Posição inválida");
